@@ -1,0 +1,101 @@
+:root {
+    --fs-sm: clamp(0.7rem, 0.35vi + 0.61rem, 0.89rem);
+    --fs-base: clamp(0.88rem, 0.57vi + 0.73rem, 1.19rem);
+    --fs-md: clamp(1.09rem, 0.89vi + 0.87rem, 1.58rem);
+    --fs-lg: clamp(1.37rem, 1.35vi + 1.03rem, 2.11rem);
+    --fs-xl: clamp(1.71rem, 2.01vi + 1.21rem, 2.81rem);
+    --fs-xxl: clamp(2.14rem, 2.93vi + 1.4rem, 3.75rem);
+    --fs-xxxl: clamp(2.67rem, 4.23vi + 1.61rem, 5rem);
+}
+
+* {
+    box-sizing: content-box;
+}
+
+body {
+    padding: 0 2px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: grey;
+    font-size: var(--fs-xl);
+}
+
+p {
+    font-size: var(--fs-md);
+}
+
+img {
+    width: 300px;
+}
+
+nav {
+    border-bottom: 1px solid grey;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link, li {
+    list-style: none;
+    border: 1px solid #cccccc;
+    border-radius: 1px;
+    box-shadow: 1px 1px 1px grey;
+    padding: 2px 4px;
+
+    &:hover {
+        background-color: grey;
+        box-shadow: 1px 1px 1px #cccccc;
+    }
+}
+
+.link {
+    width: max-content;
+    position: relative;
+    left: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        color: whitesmoke;
+    }
+}
+
+.err {
+    text-align: center;
+}
+
+input {
+    padding: 8px;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid #888;
+    background-color: #888;
+}
+
+footer {
+    padding: 5px 20px;
+    border-top: 1px dashed black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+footer p {
+    font-size: var(--fs-sm);
+}
