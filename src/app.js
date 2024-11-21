@@ -128,6 +128,6 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('Server is up and running');
-    log(`http://localhost:${port}`);
+    log('Server is up and running');
+    log(`${port}`);
 })
