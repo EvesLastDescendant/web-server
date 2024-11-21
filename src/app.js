@@ -8,6 +8,7 @@ const forecast = require('./utils/forecast');
 const { log } = require('console');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //path definitions for express
 const GenPATH = path.join(__dirname, '../public');
@@ -124,7 +125,7 @@ app.get('*', (req, res) => {
     });
 })
 
-let port = 3000;
+
 
 app.listen(port, () => {
     console.log('Server is up and running');
