@@ -32,7 +32,9 @@ weatherForm.addEventListener('submit', (e) => {
             msgElem2.textContent = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1) + ". It is currently " + data.main.temp + "°";
         }
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+        msgElem1.textContent = err
+    });
 });
 
 
