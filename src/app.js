@@ -128,6 +128,9 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
+    if (port === 3000)  {
+        return log(`http://localhost:${port}`)
+    }
     log('Server is up and running');
     log(`${port}`);
 })
